@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0wD-wR-ReZ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MichaelBlau_Lab3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fND-d9-HD7">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Pen Opacity" id="Kbn-Ih-rRg">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="hDH-dt-me9">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="vbD-qc-7CV">
+                                            <rect key="frame" x="123" y="5" width="271" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="penOpacityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ec7-KU-fzZ"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55h-7H-wPA" customClass="DrawView" customModule="MichaelBlau_Lab3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="637"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwi-Qn-Wgg">
+                                <rect key="frame" x="0.0" y="725" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Pen Size" id="AU7-zS-i5U">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="Lgg-wl-9bm">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="PE9-43-o29">
+                                            <rect key="frame" x="97" y="5" width="296" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="penSizeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3mH-XK-rxO"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="RED" id="E8e-bd-D3K">
+                            <color key="tintColor" red="1" green="0.1471013112" blue="0.1214744458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="redPen:" destination="BYZ-38-t0r" id="rds-tf-x5s"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="ORANGE" id="5dk-NP-mpp">
+                            <color key="tintColor" red="0.95686274510000002" green="0.52941176469999995" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="orangePen:" destination="BYZ-38-t0r" id="g8z-gZ-wY3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="YELLOW" id="7Af-mp-N56">
+                            <color key="tintColor" red="0.89821878340000005" green="0.77030134709999998" blue="0.14924592179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="yellowPen:" destination="BYZ-38-t0r" id="jYS-bV-Xyc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="GREEN" id="TJ5-Un-hiZ">
+                            <color key="tintColor" red="0.086274509799999996" green="1" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="greenPen:" destination="BYZ-38-t0r" id="KLm-SZ-giV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="BLUE" id="HqH-Q3-dMB">
+                            <color key="tintColor" red="0.07530332076" green="0.13284351859999999" blue="0.95523184539999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="bluePen:" destination="BYZ-38-t0r" id="Zi6-nf-BkG"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="UwK-gI-lgf">
+                        <nil key="title"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Eraser" id="wCZ-wi-gAK">
+                                <connections>
+                                    <action selector="eraser:" destination="BYZ-38-t0r" id="7kN-DI-j6B"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Clear" id="lMK-2Q-VdJ">
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" id="DIr-hn-hPC"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Undo" id="yu0-mi-Tnv">
+                                <connections>
+                                    <action selector="undoPressed:" destination="BYZ-38-t0r" id="WWZ-Yi-8Jm"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="SdM-KU-LQt">
+                            <connections>
+                                <action selector="saveDrawing:" destination="BYZ-38-t0r" id="pou-a9-3q9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lineCanvas" destination="55h-7H-wPA" id="HWY-Eb-jKX"/>
+                        <outlet property="penOpacity" destination="vbD-qc-7CV" id="n3q-VI-VeH"/>
+                        <outlet property="penSizeSlider" destination="PE9-43-o29" id="qVS-75-XN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997.1014492753625" y="130.58035714285714"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="BZK-dz-VBW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="0wD-wR-ReZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Msa-ZO-m9s"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="NiJ-WT-36q"/>
+                    </toolbarItems>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6EQ-Fe-xWl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qp0-7a-CYa">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QXx-Ua-VsR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inA-zl-WTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
