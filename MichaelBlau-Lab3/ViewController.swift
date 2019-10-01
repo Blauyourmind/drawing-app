@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var lineCanvas: DrawView!
-    //    var lineCanvas: DrawView!
     var currentLine: Line?
     var currentPenSize:Float = 10.0
     var currentColor:UIColor = UIColor.red
@@ -81,7 +80,6 @@ class ViewController: UIViewController {
             return
         }
 
-        //let currentDot = Dot(center: touchPoint)
         currentLine = Line(dots: [], color: currentColor, size: CGFloat(currentPenSize),opacity:currentOpacity)
         currentLine?.dots.append(touchPoint)
     }
