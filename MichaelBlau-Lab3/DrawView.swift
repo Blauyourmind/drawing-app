@@ -59,6 +59,7 @@ class DrawView: UIView {
         line.color.setStroke()
         path.lineJoinStyle = .round
         path.lineCapStyle = .round
+        path.stroke(with: .normal, alpha: line.opacity)
         if line.color == UIColor.white{
             path.stroke(with: .normal, alpha: 1.0)
         }

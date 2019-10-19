@@ -16,15 +16,14 @@ class ViewController: UIViewController {
     var currentColor:UIColor = UIColor.red
     var currentOpacity: CGFloat = 1.0
 
+    
     @IBOutlet weak var penSizeSlider: UISlider!
-    
-    
     @IBAction func penSizeChanged(_ sender: Any) {
         currentPenSize = penSizeSlider.value * 60
     }
     
-    @IBOutlet weak var penOpacity: UISlider!
     
+    @IBOutlet weak var penOpacity: UISlider!
     @IBAction func penOpacityChanged(_ sender: Any) {
         currentOpacity = CGFloat(penOpacity.value)
     }
@@ -71,8 +70,6 @@ class ViewController: UIViewController {
         self.navigationController?.setToolbarHidden(false, animated: true)
         // Do any additional setup after loading the view.
         
-//        lineCanvas = DrawView(frame: view.frame)
-        //view.addSubview(lineCanvas)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -97,6 +94,7 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let line = currentLine{
             lineCanvas.lines.append(line)
+            lineCanvas.theLine = nil
         }
     }
     
@@ -108,13 +106,6 @@ class ViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         // credit to www.hackingwithswift.com/example-code/media/how-to-render-a-uiview-to-a-uiimage
     
-//        var drawings = UserDefaults.standard.array(forKey: "drawings")
-//        drawings.append(lineCanvas.lines)
-//        UserDefaults.standard.set(drawings, forKey: "drawings")
-//        print("set user defaults")
-//        if let array = UserDefaults.standard.array(forKey: "drawings"){
-//            print(array.count)
-//        }
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
