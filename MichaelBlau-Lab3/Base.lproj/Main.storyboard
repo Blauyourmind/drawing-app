@@ -52,13 +52,13 @@
                                         <rect key="frame" x="0.0" y="58" width="414" height="58"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L3M-yi-5Ig">
-                                                <rect key="frame" x="99" y="13" width="309" height="33"/>
+                                                <rect key="frame" x="126" y="13" width="282" height="33"/>
                                                 <connections>
                                                     <action selector="penOpacityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9dr-3n-CvV"/>
                                                 </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pen Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34U-6E-rQf">
-                                                <rect key="frame" x="8" y="17" width="66" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pen Opacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34U-6E-rQf">
+                                                <rect key="frame" x="8" y="17" width="93" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
